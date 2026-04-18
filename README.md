@@ -7,10 +7,12 @@ A reusable Python library that emulates a subset of OpenCV's core functionality.
 
 # MiniCV Function Descriptions
 **1. Packaging & Project Structure**
+
 __init__.py
 Initializes the MiniCV package and exposes public APIs for easy importing of core modules (I/O, filtering, transforms, features, drawing, utils).
 
 **2. Image I/O & Core Utilities**
+
 read_image(filepath)
 Loads an image from disk into a NumPy array using Matplotlib backends. Supports common formats like PNG and JPG, returning the image as a multi-dimensional array for processing.
 
@@ -24,6 +26,7 @@ gray_to_rgb(image)
 Converts a grayscale image to RGB format by replicating the single channel across three channels, maintaining consistent shape conventions.
 
 **3. Core Operations (Foundation Functions)**
+
 normalize(image, mode)
 Normalizes pixel values using one of at least three modes (e.g., min-max normalization to [0, 1], standardization, or scale to [0, 255]). Ensures consistent intensity ranges for processing.
 
@@ -40,6 +43,7 @@ filter2d(image, kernel)
 Applies convolution-based filtering to both grayscale and RGB images. For RGB, processes each channel independently and recombines results.
 
 **4. Image Processing Techniques**
+
 mean_filter(image, kernel_size)
 Applies a mean (box) filter for smoothing by averaging pixel values within a local neighborhood. Reduces noise while blurring edges.
 
@@ -80,6 +84,7 @@ gamma_correction(image, gamma)
 Performs non-linear gamma correction to adjust image brightness and contrast. Values of gamma < 1 brighten the image, while gamma > 1 darkens it. Uses power-law transformation: output = input^gamma.
 
 **5. Geometric Transformations**
+
 resize(image, new_width, new_height, interpolation)
 Resizes an image to specified dimensions using interpolation methods. Supports at least nearest-neighbor (required minimum) and bilinear interpolation for quality scaling.
 
@@ -90,6 +95,7 @@ translate(image, tx, ty)
 Shifts an image by specified offsets (tx, ty) along x and y axes. Handles boundary regions appropriately.
 
 **6. Feature Extractors**
+
 color_histogram(image, bins)
 Extracts a global color histogram descriptor by computing the distribution of color values across channels. For RGB images, computes per-channel histograms and concatenates them into a single feature vector characterizing overall color distribution.
 
@@ -103,6 +109,7 @@ edge_histogram_descriptor(image, bins)
 Extracts a gradient-based edge histogram descriptor by analyzing the distribution of edge orientations and magnitudes across the image. Computes edge information using gradient operators and creates a histogram representing edge patterns and their spatial distribution.
 
 **7. Drawing Primitives (Canvas Operations)**
+
 draw_point(image, x, y, color, thickness)
 Draws a single point at coordinates (x, y) with specified color and thickness. Handles grayscale (scalar) and RGB (tuple) color formats.
 
