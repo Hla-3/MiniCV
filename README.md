@@ -102,10 +102,10 @@ Extracts a global color histogram descriptor by computing the distribution of co
 basic_statistics(image)
 Computes basic statistical descriptors for the entire image including mean, standard deviation, variance, min, max, and other moments. Returns a feature vector summarizing global intensity characteristics.
 
-hog_lite(image, cell_size, bins)
+hog_lite(image, bins)
 Implements a lightweight Histogram of Oriented Gradients (HOG) descriptor. Divides the image into cells, computes gradient orientations, and builds histograms of gradient directions. Captures local shape and texture information through edge orientation patterns.
 
-edge_histogram_descriptor(image, bins)
+edge_histogram_descriptor(image, cell_size, bins)
 Extracts a gradient-based edge histogram descriptor by analyzing the distribution of edge orientations and magnitudes across the image. Computes edge information using gradient operators and creates a histogram representing edge patterns and their spatial distribution.
 
 **7. Drawing Primitives (Canvas Operations)**
